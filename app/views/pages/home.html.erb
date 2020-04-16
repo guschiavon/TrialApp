@@ -1,10 +1,14 @@
 <h1>Homepage</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
 
-<h2>Blog posts</h2>
+
+<h2><%= link_to "Blog Posts", blogs_path %></h2>
 
 <%= @blogs.inspect %>
 
 <h2>Skills</h2>
 
 <%= @skills.inspect %>
+
+<h2><%= link_to "Portolio Projects", portfolios_path %></h2>
+
+<%= @portfolios.inspect %>
