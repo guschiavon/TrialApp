@@ -6,7 +6,7 @@ class PortfoliosController < ApplicationController
   def jekyll
     @jekyll_portfolio_items = Portfolio.jekyll
   end
-  
+
   def sass
     @sass_portfolio_items = Portfolio.sass
   end
@@ -26,6 +26,7 @@ class PortfoliosController < ApplicationController
       end
     end
   end
+
 
   def edit
     @portfolio_items = Portfolio.find(params[:id])
