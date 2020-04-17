@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :portfolios, except: [:show] #altering path, lesson 65
+  get 'jekyll-projects', to: 'portfolios#jekyll'
+  get 'sass-projects', to: 'portfolios#sass'
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
 
   get 'about', to: 'pages#about'
@@ -7,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :blogs do
     member do
-      get :toggle_status 
+      get :toggle_status
     end
   end
 

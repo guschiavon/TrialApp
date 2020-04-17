@@ -3,6 +3,14 @@ class PortfoliosController < ApplicationController
     @portfolio_items = Portfolio.all
   end
 
+  def jekyll
+    @jekyll_portfolio_items = Portfolio.jekyll
+  end
+  
+  def sass
+    @sass_portfolio_items = Portfolio.sass
+  end
+
   def new
     @portfolio_items = Portfolio.new
   end
