@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :portfolios, except: [:show] #altering path, lesson 65
   get 'jekyll-projects', to: 'portfolios#jekyll'
   get 'sass-projects', to: 'portfolios#sass'
