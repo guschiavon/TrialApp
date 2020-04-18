@@ -1,14 +1,21 @@
+
+<% if current_user %>
+<h2>Hi <%= current_user.first_name %></h2>
+<% end %>
+
+
 <h1>Homepage</h1>
 
 
+
 <h2><%= link_to "Blog Posts", blogs_path %></h2>
+<% @blogs.each do |blog| %>
+<%= blog.title %>
+<% end %>
 
-<%= @blogs.inspect %>
 
-<h2>Skills</h2>
-
-<%= @skills.inspect %>
 
 <h2><%= link_to "Portolio Projects", portfolios_path %></h2>
-
-<%= @portfolios.inspect %>
+<% @portfolios.each do |item| %>
+<%= item.title %>
+<% end %>
