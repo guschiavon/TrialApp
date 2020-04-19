@@ -3,4 +3,8 @@ class ApplicationController < ActionController::Base
 
   include DeviseWhitelist
 
+  def set_source
+    session[:source] = params[:q] if params[:q]
+  end
+
 end
