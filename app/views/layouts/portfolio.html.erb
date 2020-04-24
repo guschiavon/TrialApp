@@ -20,12 +20,7 @@
 
     <%= yield %>
 
-
-    <% if session[:source] %>
-
-    <h4> Thanks for visiting from <%= session[:source] %> </h4>
-
-    <% end %>
+    <%= source_helper %>
 
   </body>
 </html>
